@@ -1,17 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <img alt="FawiLogo" src="./assets/money.png">
+  <Fawi msg="Fachschaft Wirtschaft sagt cash rules"/>
   <Gallery msg="HOT SEXY REWE CLICK NOW"/>
 </template>
 
 <script>
+//import { db } from '@/firebase';
 import Gallery from './components/GalleryView.vue';
-import HelloWorld from './components/HelloWorld.vue';
+import Fawi from './components/FawiPage.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    Fawi,
     Gallery
   }
 }

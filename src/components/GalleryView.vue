@@ -27,8 +27,8 @@
 </template>
 
 <script>
-import firebase from 'firebase/app'
-import { db } from '@/firebase'
+import { db } from '@/firebase';
+import { storage } from 'firebase/app'; // Import the storage module from firebase/app
 
 export default {
   data() {
@@ -54,7 +54,7 @@ export default {
       this.newImage.file = event.target.files[0]
     },
     async addImage() {
-      const storageRef = firebase.storage().ref()
+      const storageRef = storage().ref(); // Use the storage() function to get the storage reference
       const fileRef = storageRef.child(`images/${this.newImage.file.name}`)
       const snapshot = await fileRef.put(this.newImage.file)
       const url = await snapshot.ref.getDownloadURL()
